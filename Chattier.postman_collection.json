@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "fde5dfec-3833-4854-9981-a688710318d8",
+		"name": "Chattier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Chattier - sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " { \r\n    \"name\": \"testName123\",\r\n    \"lastName\": \"testLastname123\",\r\n    \"email\": \"testName123@gmail.com\",\r\n    \"password\": \"test123123\",\r\n    \"rePassword\": \"test123123\",\r\n    \"lang\": \"tr\",\r\n    \"country\": \"turkey\"\r\n } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chattier - Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testName123@gmail.com\",\r\n    \"password\": \"test123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chattier - Get User information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGZlZTY2NDBjMGQwMjQ3YzhjZmIzOCIsImVtYWlsIjoidGVzdE5hbWUxMjNAZ21haWwuY29tIiwiaWF0IjoxNjQ1MjE5NzgzfQ.WG9UFIi4bxSqd6ZhnLtU0y0RHVs0tIsHCBXzFF5ol88",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/620fee6640c0d0247c8cfb38",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"620fee6640c0d0247c8cfb38"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chatroom",
+			"item": [
+				{
+					"name": "Chattier - Create Chatroom",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGZlZTY2NDBjMGQwMjQ3YzhjZmIzOCIsImVtYWlsIjoidGVzdE5hbWUxMjNAZ21haWwuY29tIiwiaWF0IjoxNjQ1MjE5NzgzfQ.WG9UFIi4bxSqd6ZhnLtU0y0RHVs0tIsHCBXzFF5ol88",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"meetingone\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/chatroom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chatroom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chattier - Get All Chatrooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/chatroom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chatroom"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
